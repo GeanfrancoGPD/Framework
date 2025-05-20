@@ -1,1 +1,22 @@
 # Framework
+## primer paso: Implementacion de una nueva libreria 
+lo primero que se hizo fue agregar una nueva libreria para agregar las rutas 
+
+Para instalarla debes colocar el siguiente comando
+
+```js
+npm install react-router-dom
+```
+
+Y para importarlo se veria de esta manera:
+
+```Js
+import {browserRouter} from 'react-router-dom';
+```
+Se hizo para trabajar mejor el programa de una forma modular 
+
+## Rutas implemetadas 
+- Login (version beta)
+- register (version beta)
+
+---
