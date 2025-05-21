@@ -1,5 +1,5 @@
 // Login.js
-import './login.css';
+import styles from './login.module.css';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
@@ -10,18 +10,16 @@ function Login() {
   };*/
 
   return (
-    <div className="main">
-        <div className="login-container">
-            <h1 className="login-title">Login</h1>
+    <div className={styles.main}>
+        <div className={styles.loginContainer}>
+            <h1 className={styles.loginTitle}>Login</h1>
             <form>
                 <input type="text" placeholder="Usuario" />
                 <input type="password" placeholder="Contraseña" />
-                <input type="gmail" placeholder="Correo"/>
-                <input type="tel" placeholder="Numero de telefono"></input>
-                <button type="submit" className='Button-login'>Iniciar Sesión</button>
+                <button type="submit" className={styles.ButtonLogin}>Iniciar Sesión</button>
             </form>
-            <p className="register-link">
-              ¿No tienes cuenta? <a href="/register" className="Button-register">Regístrate aquí</a>
+            <p className={styles.registerLink}>
+              ¿No tienes cuenta? <a href="/register" className={styles.ButtonRegister}>Regístrate aquí</a>
             </p>
             
         </div>

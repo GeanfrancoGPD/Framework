@@ -9,16 +9,17 @@
   width: 100%;
 
   background-image: url("https://logincdn.msauth.net/shared/5/images/fluent_web_dark_94c32326ccd74b2d9702.svg");
+  background-size: cover;
   background-position: center;
 
 }
 
-.login-container {
+.loginContainer {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 70vh;
+  height: 60vh;
   width: 70vh;
   background: #292929;
   color: white;
@@ -29,7 +30,7 @@
 }
 
 
-.login-title{
+.loginTitle{
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 2.5rem;
@@ -38,11 +39,11 @@
 }
 
 
-.login-container input{
+.loginContainer input{
   display: block;
   top: 80%;
   width: 100%;
-  margin: 8px 0;
+  margin: 12px 0;
   padding: 8px;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -52,12 +53,12 @@
   box-sizing: border-box;
 }
 
-.login-container input::placeholder {
+.loginContainer input::placeholder {
   color: #aaa;
 }
 
 
-.Button-login{
+.ButtonLogin{
   display: block;
   position: absolute;
   border-radius: 6px;
@@ -65,26 +66,26 @@
   margin: 6px;
   left: 28%;
   width: 40%;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   background-color: rgb(3, 185, 49);
 
 }
 
-.register-link {
+.registerLink {
   margin-top: 60px;
   text-align: center;
   font-size: 0.95rem;
   color: #ccc;
 }
 
-.Button-register {
+.ButtonRegister {
   color: rgb(3, 185, 49);
   text-decoration: none;
   font-weight: bold;
   margin-left: 5px;
 }
 
-.Button-register:hover {
+.ButtonRegister:hover {
   text-decoration: underline;
 }
 

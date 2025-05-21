@@ -31,3 +31,15 @@ la imagen utilizada esta en esta direccion:
 Cuenta con un login y la direccion a la pagina de registar
 
 
+# Register
+La segunda pagina en ser creada fue esta, y se aplicaron unos cambios al diseño de la estructura de como importaban los estilos porque ocurria un error de la otra forma, ya que si importaba cualquier archivo .css se iba a sobreponer al anterior 
+
+asi que se cambio de 
+```js
+import ./"styles.css"
+```
+ha una que implementada la palabra module para que react entendiera que son modulos separados por paginas y no un estilo global, se hizo de la siguinte manera para que se pudiera separar por modulos.
+
+```js
+import style from './style.module.css'
+```
