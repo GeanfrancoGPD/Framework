@@ -4,7 +4,7 @@ function Register() {
     <div>
       <h1>Registro</h1>
       <form>
-        {/* Aquí va tu formulario de registro */}
+        
         <input type="text" placeholder="Nombre de usuario" />
         <input type="email" placeholder="Correo electrónico" />
         <input type="password" placeholder="Contraseña" />
