@@ -43,3 +43,20 @@ ha una que implementada la palabra module para que react entendiera que son modu
 ```js
 import style from './style.module.css'
 ```
+
+# Autenticacion con firebase
+
+para hacer la autenticacion se necesito instalar la libreria de firebase para poder conectar con el proyecto de react. Lo primero que hice fue implementar la libreria con 
+
+```js
+npm install firebase
+```
+
+ya luego se implemento el archivo personalizado de configuraciones en se exporto al registro y login. se implemento tambien estas nuevas librerias 
+
+```js
+import { useAuth } from '../firebase/authContex';
+import { useNavigate } from 'react-router-dom';
+```
+
+para el manejo de autenticacion y para la navegacion entre rutas 

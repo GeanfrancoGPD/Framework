@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {browserRouter} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
+import { AuthProvider } from "./firebase/authContex";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <browserRouter>
-      <App />
-    </browserRouter>
+    <AuthProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+    </AuthProvider>
   </React.StrictMode>
 );
 
