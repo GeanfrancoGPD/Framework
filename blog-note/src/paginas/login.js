@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import styles from './login.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../firebase/authContex';
+import home_blog from './home_blog';
 
 function Login() {
   const [email, setEmail] = useState("");       // Cambiar "user" por "email"
@@ -23,7 +24,7 @@ function Login() {
     try {
       await login(email, password); // Llama a la función de login
       console.log("Bienvenido");
-      navigate('/'); // Redirige a la página principal
+      navigate('/home-blog'); // Redirige a la página principal
     } catch (err) {
       console.error("Error al iniciar sesión:", err.message);
       setError("Correo o contraseña incorrectos");
