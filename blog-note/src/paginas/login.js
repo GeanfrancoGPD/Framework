@@ -1,13 +1,12 @@
 // Login.js
-import React, { useState } from 'react';
+import { useState } from "react";
 import styles from './login.module.css';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../firebase/authContex';
-import home_blog from './home_blog';
 
 function Login() {
-  const [email, setEmail] = useState("");       // Cambiar "user" por "email"
-  const [password, setPassword] = useState(""); // Cambiar "pass" por "password"
+  const [email, setEmail] = useState("");       
+  const [password, setPassword] = useState(""); 
   const [error, setError] = useState("");
 
   const { login } = useAuth();  // Acceder a la función login desde el contexto

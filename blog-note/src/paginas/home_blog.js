@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useAuth } from "../firebase/authContex";
+import Nota from "../components/note_componet";
 import style from "./home_blog.module.css";
 
 function Home_blog() {
@@ -7,6 +9,8 @@ function Home_blog() {
         { notasID: 2, titulo: "Nota2", contenido: "word" },
         
     ]);
+
+    const { user } = useAuth();
 
     const [mostrarVentana, setMostrarVentana] = useState(false);
 
@@ -62,10 +66,7 @@ function Home_blog() {
             <h1>Notas:</h1>
             <ul className={style.gridNotas}>
                 {notas.map((nota) => (
-                    <li key={nota.notasID} className={style.notaItem}>
-                    <h3>{nota.titulo}</h3>
-                    <p>{nota.contenido}</p>
-                    </li>
+                    <Nota key={nota.notasID} titulo={nota.titulo} contenido={nota.contenido} />
                 ))}
             </ul>
         </div>

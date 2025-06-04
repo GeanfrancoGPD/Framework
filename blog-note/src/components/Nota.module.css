@@ -1,0 +1,35 @@
+.notaItem {
+  background-color: rgba(3, 3, 114, 0.507);
+  border: 1px solid rgb(0, 149, 255);
+  border-radius: 10px;
+  padding: 10px;
+  list-style: none;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0.9, 0.9);
+  max-width: 200px;     /* Controla el ancho máximo */
+  min-height: 80px;    /* Altura mínima opcional */
+  max-height: 150px;    /* Altura máxima para evitar crecimiento excesivo */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notaItem h3 {
+  font-size: 1rem;
+  margin:5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notaItem p {
+  font-size: 0.9rem;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;   /* Máximo 4 líneas */
+  -webkit-box-orient: vertical;
+  line-clamp: 4;          
+}
