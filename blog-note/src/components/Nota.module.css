@@ -24,7 +24,7 @@
 }
 
 .notaItem p {
-  font-size: 0.9rem;
+  font-size: 2vh;
   margin: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -32,4 +32,18 @@
   -webkit-line-clamp: 4;   /* Máximo 4 líneas */
   -webkit-box-orient: vertical;
   line-clamp: 4;          
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px; /* espacio entre botones */
+  margin-top: 10px; /* espacio arriba */
+}
+
+.ButtonSelection{
+  font-size: 2.5vh;
+  border-radius: 10px;
+  color: #fff;
+  border-color: rgb(0, 149, 255);
+  background-color: #001B38;
 }
