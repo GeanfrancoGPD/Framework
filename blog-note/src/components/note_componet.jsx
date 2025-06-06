@@ -1,6 +1,6 @@
 // components/Nota.jsx
 import style from "./Nota.module.css";
-import {editarNota,eliminarNota} from "./Notas_setting"
+import {eliminarNota} from "./Notas_setting"
 
 const Nota = ({ user, id, titulo, contenido, onEditar, onVer }) => (
   <li className={style.notaItem}>
