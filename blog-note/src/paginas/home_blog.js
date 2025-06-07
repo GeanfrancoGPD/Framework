@@ -16,6 +16,11 @@ function Home_blog() {
     const [notaVer, setNotaVer] = useState(null);
     const [mostrarVerNota, setMostrarVerNota] = useState(false);
 
+    const [modoVista, setModoVista] = useState('grid');
+    const toggleVista = () => {
+        setModoVista(prev => (prev === 'grid' ? 'lista' : 'grid'));
+    };
+
     
     const navigate = useNavigate();
 
@@ -114,17 +119,20 @@ function Home_blog() {
 
             <div className={style.body}>
                 <h1>Notas:</h1>
-                <ul className={style.gridNotas}>
+                <div className={modoVista === 'grid' ? style.gridNotas : style.listaNotas}>
                     {user && notas.map((nota) => (
                         <Nota key={nota.notasID} user={user.uid} id={nota.notasID} 
                         titulo={nota.titulo} contenido={nota.contenido} 
                         onEditar={comenzarEdicion} onVer={abrirVerNota} />
                     ))}
-                </ul>
+                </div>
             </div>
 
             <div className={style.footer}>
                 <button onClick={abrirVentana} className={style.buttonCreate}>Crear Nota</button>
+                 <button onClick={toggleVista} className={style.ButtonCambio}>
+                    Cambiar a vista {modoVista === 'grid' ? 'lista' : 'grid'}
+                </button>
             </div>
 
             {mostrarVentana && (
